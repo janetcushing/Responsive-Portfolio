@@ -11,7 +11,7 @@ header {
   height: 85px;
 }
 
-.head1 {
+.mainHeading {
   float: left;
   font-family: Georgia, Times, 'Times New Roman', serif;
   font-size: 24px;
@@ -33,9 +33,9 @@ nav {
   left: 390px;
 }
 
-.btna,
-.btnc,
-.btnp {
+.aboutButton,
+.contactButton,
+.portfolioButton {
   float: left;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
@@ -45,14 +45,14 @@ nav {
   margin-right: 2px;
 }
 
-.btna:hover,
-.btnc:hover,
-.btnp:hover {
-  background-color:#B5FAF5;
+.aboutButton:hover,
+.contactButton:hover,
+.portfolioButton:hover {
+  background-color: #B5FAF5;
 }
 
-.btna,
-.btnp {
+.aboutButton,
+.portfolioButton {
   border-right: 2px solid #A09D9D;
 }
 
@@ -64,7 +64,7 @@ body {
   background-image: url("../images/stucco/stucco.png")
 }
 
-.section1 {
+.mainSection {
   float: left;
   width: 580px;
   background-color: white;
@@ -73,7 +73,7 @@ body {
   padding: 20px 20px 20px 20px;
 }
 
-.section_head {
+.mainSectionHead {
   color: #4aaaa5;
   font-family: Georgia, Times, 'Times New Roman', serif;
   font-size: 28px;
@@ -84,18 +84,7 @@ body {
   margin-bottom: 20px;
 }
 
-.section2_head {
-  color: #4aaaa5;
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  font-size: 20px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #dddddd;
-  margin-bottom: 20px;
-}
-
-.section2 {
+.asideSection {
   position: relative;
   left: 10px;
   float: left;
@@ -104,6 +93,17 @@ body {
   border: 1px solid #dddddd;
   margin: 30px 10px 30px 10px;
   padding: 20px;
+}
+
+.asideSectionHead {
+  color: #4aaaa5;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #dddddd;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -123,7 +123,7 @@ footer {
 
 /* used in index page */
 
-img {
+.indexImg {
   padding: 0px 20px 10px 0px;
   float: left;
 }
@@ -131,17 +131,32 @@ img {
 
 /*used in portfolio page*/
 
-.imgp {
-  z-index: 2;
-  position: relative;
-  padding: 20px 20px 30px 10px;
+.mainSectionRow1,
+.mainSectionRow2,
+.mainSectionRow3 {
+  width: 540px;
+  height: 180px;
+  background-color: white;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 20px 10px 20px;
 }
 
-.captionp1,
-.captionp2,
-.captionp3,
-.captionp4,
-.captionp5 {
+.hangmanProject,
+.rpgGameProject,
+.triviaGameProject,
+.rutgersInfoWidgetProject,
+.rockPaperScissorsProject {
+  z-index: 2;
+  float: left;
+  position: relative;
+  padding: 0px 10px 0px 10px;
+}
+
+.hangmanCaption,
+.rpgGameCaption,
+.triviaGameCaption,
+.rutgersInfoWidgetCaption,
+.rockPaperScissorsCaption {
   color: whitesmoke;
   background-color: #4aaaa5;
   text-align: center;
@@ -151,31 +166,8 @@ img {
   width: 200px;
   z-index: 3;
   position: absolute;
-}
-
-.captionp1 {
-  top: 372px;
-  left: 181px;
-}
-
-.captionp2 {
-  top: 372px;
-  left: 461px;
-}
-
-.captionp3 {
-  top: 600px;
-  left: 181px;
-}
-
-.captionp4 {
-  top: 600px;
-  left: 461px;
-}
-
-.captionp5 {
-  top: 830px;
-  left: 181px;
+  top: 110px;
+  left: 10px;
 }
 
 
@@ -216,7 +208,7 @@ input {
   color: #A09F9F;
 }
 
-.submit_btn {
+.submitButton {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   color: whitesmoke;
@@ -232,4 +224,199 @@ input {
   width: 560px;
   height: 150px;
   padding: 5px;
+}
+
+
+/* MEDIA TAGS */
+
+@media screen and (max-width: 980px) {
+  nav {
+    float: left;
+    color: #242121;
+    width: 270px;
+    padding: 20px;
+    margin: 0px 90px 0px 30px;
+    position: relative;
+    left: 55px;
+  }
+  .mainSection {
+    float: left;
+    width: 580px;
+    background-color: lightsalmon;
+    border: 1px solid #dddddd;
+    margin: 30px 10px 40px 150px;
+    padding: 20px 10px 20px 10px;
+  }
+  .asideSection {
+    float: left;
+    background-color: lightblue;
+    width: 580px;
+    border: 1px solid #dddddd;
+    margin: 30px 10px 40px 140px;
+    padding: 20px 10px 20px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainHeading {
+    float: left;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: #4aaaa5;
+    padding: 25px 40px 15px 10px;
+    margin: 0px 0px 0px 20px;
+    height: 45px;
+  }
+  nav {
+    float: left;
+    color: #242121;
+    width: 200px;
+    padding: 20px;
+    margin: 0px 60px 0px 20px;
+    position: relative;
+    left: 148px;
+  }
+  .aboutButton,
+  .contactButton,
+  .portfolioButton {
+    float: left;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #A09D9D;
+    padding: 0px 5px 0px 5px;
+    margin-right: 2px;
+  }
+  .mainSection {
+    float: left;
+    width: 580px;
+    background-color: yellow;
+    border: 1px solid #dddddd;
+    margin: 30px 20px 30px 20px;
+    padding: 20px 10px 20px 10px;
+  }
+  .asideSection {
+    float: left;
+    background-color: lightgoldenrodyellow;
+    width: 580px;
+    border: 1px solid #dddddd;
+    margin: 20px 10px 40px 10px;
+    padding: 20px 10ps 20px 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #777777;
+    background-image: url("../images/stucco/stucco.png")
+  }
+  header {
+    position: static;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100px;
+  }
+  .mainHeading {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+     color: whitesmoke;
+    background-color: #4aaaa5;
+    /* padding: 15px 100px 10px 100px; */
+    height: 25px;
+    width: 100%;
+  }
+  nav {
+    color: #242121;
+    width: 100%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .aboutButton,
+  .contactButton,
+  .portfolioButton {
+    float: left;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    color: #A09D9D;
+    padding: 0px 10px 0px 10px;
+    margin-right: 2px;
+  }
+  .mainSection {
+    width: 400px;
+    height: auto;
+    ;
+    background-color: lightgreen;
+    border: 1px solid #dddddd;
+    margin: 10px 10px 10px 10px;
+    padding: 15px 10px 20px 10px;
+  }
+  .mainSectionRow1,
+  .mainSectionRow2,
+  .mainSectionRow3 {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 20px 10px 20px;
+  }
+  hangmanProject,
+  .RpgGameProject,
+  .TriviaGameProject,
+  .RutgersInfoWidgetProject,
+  .RockPaperScissorsProject {
+    padding: 10px 10px 10px 10px;
+  }
+  .asideSection {
+    background-color: lightPink;
+    height: auto;
+    width: 400px;
+    border: 1px solid #dddddd;
+    margin: 15px 0px 10px 0px;
+    padding: 10px 15ps 0px 15px;
+  }
+  .mainSectionHead {
+    color: #4aaaa5;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 200%;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #dddddd;
+    margin-bottom: 20px;
+  }
+  .asideSectionHead {
+    color: #4aaaa5;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #dddddd;
+    margin-bottom: 20px;
+  }
+  footer {
+    clear: both;
+    background-color: #666666;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 11px;
+    width: 100%;
+    padding: 20px;
+    border-top: 5px solid #4aaaa5;
+  }
 }
