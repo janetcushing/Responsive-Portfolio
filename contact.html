@@ -11,6 +11,8 @@
     <!-- Link to CSS stylesheets -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+     <!-- Link to jQuery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -34,17 +36,17 @@
     <section class="mainSection">
         <h2 class="mainSectionHead">Contact</h2>
         <br>
-        <form action="mailto:janet.cushing@gmail.com" method="post" enctype="text/plain" autocomplete="on">
+        <form>
             Name<br><br>
-            <input type="text" name="name" placeholder="John Smith" size=40 class="textInput">
+            <input type="text" name="name" id="nameInput" placeholder="John Smith" size=40 class="textInput">
             <br><br> Email
             <br><br>
-            <input type="email" name="email" placeholder="example@gmail.com" size=40 class="textInput">
+            <input type="email" name="email" id="emailInput" placeholder="example@gmail.com" size=40 class="textInput">
             <br><br> Message
             <br><br>
-            <input type="text" name="message" class="textarea_msg">
+            <input type="text" name="message" id="comment" class="textarea_msg">
             <br><br>
-            <input class="submitButton" type="submit" value="Submit">
+            <input class="submitButton" type="submit" id="submit" value="Submit">
         </form>
 
     </section>
@@ -63,4 +65,5 @@
     </aside>
     <div class="clear"></div>
     <footer>&copy; 2017 Janet Cushing</footer>
+    <script type="text/javascript " src="assets/js/contact.js "></script>
 </body>
